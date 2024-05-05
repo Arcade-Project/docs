@@ -3,28 +3,31 @@ name: "docs-deploy"
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 20
-          cache: "npm"
+          version: 8
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
 
       - name: Install dependencies
-        working-directory: ./
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        working-directory: ./
-        run: npm run build
+        run: pnpm build
 
       - name: Upload
         uses: actions/upload-pages-artifact@v3
