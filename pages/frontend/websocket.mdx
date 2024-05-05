@@ -1,0 +1,39 @@
+# 🌐Websocket
+
+Example of a WS message for the backend :
+
+```ts
+const newSocket = new WebSocket("ws://localhost:8765");
+
+const message = {
+    scripts: {
+        whatsmyname: {
+            value: "JohnDoe",
+            categories: "all",
+        },
+    }
+}    
+
+newSocket.addEventListener("open", () => {
+    console.log("WebSocket opened");
+    newSocket.send(JSON.stringify(message));
+});
+```
+
+List of valid scripts options [#valide-script](./../backend/websocket/#valid-scripts-options)
+
+<Warning>scripts cannot exceed 5 options</Warning>
+
+<Caution>
+**Error :**
+
+Invalid characters : 
+String contains a space ( ). 
+
+String begins with a hyphen (-). 
+
+The string ends with a hyphen (-). 
+
+String contains one of the following characters: (/) or ( \).
+
+</Caution>
