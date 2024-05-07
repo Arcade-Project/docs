@@ -19,7 +19,7 @@ export default function LandingPage() {
           Quick and easy to use arcade db makes osint accessible.
         </Hero.Subtitle>
         <Hero.Actions>
-          <Button to="/welcome">Get started</Button>
+          <Button to="/en/welcome">Get started</Button>
           <Button type="secondary">
             <a target="_blank" href="https://github.com/arcade-project/">
               View on GitHub
