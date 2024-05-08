@@ -63,14 +63,14 @@ export default defineTheme([
     directories: [
       directory("en", {
         sidebar: [
-          group("Getting started", [link("Welcome", "/en/welcome")]),
+          group("Getting started", [link("Welcome", "/arcade-db/welcome")]),
           separator(),
           group("Docs", [
             link.nested("Backend", [
-              link("Websocket", "/en/backend/websocket"),
+              link("Websocket", "/arcade-db/backend/websocket"),
             ]),
             link.nested("Frontend", [
-              link("Websocket", "/en/frontend/websocket"),
+              link("Websocket", "/arcade-db/frontend/websocket"),
             ]),
           ]),
         ],
