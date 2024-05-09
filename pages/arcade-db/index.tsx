@@ -20,10 +20,8 @@ export default function LandingPage() {
         </Hero.Subtitle>
         <Hero.Actions>
           <Button to="/arcade-db/welcome">Get started</Button>
-          <Button type="secondary">
-            <a target="_blank" href="https://github.com/arcade-project/">
-              View on GitHub
-            </a>
+          <Button to="https://github.com/arcade-project/" type="secondary">
+            View on GitHub
           </Button>
         </Hero.Actions>
       </Hero>

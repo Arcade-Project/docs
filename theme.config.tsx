@@ -71,6 +71,7 @@ export default defineTheme([
             ]),
             link.nested("Frontend", [
               link("Websocket", "/arcade-db/frontend/websocket"),
+              link("Search Bar", "/arcade-db/frontend/components/search-bar"),
             ]),
           ]),
         ],

@@ -1,0 +1,24 @@
+# Search Bar
+
+## Usage
+
+```tsx
+import {
+  SearchBar,
+  SearchBarInput,
+  SearchBarLeftItem,
+  SearchBarRightItem,
+} from "@/components/search-bar/SearchBar";
+```
+
+```tsx
+<SearchBar>
+  <SearchBarLeftItem>
+    <img src={magnifyingIcon} alt="magnifying icon loupe" />
+  </SearchBarLeftItem>
+  <SearchBarRightItem>
+    <span>Ctrl K</span>
+  </SearchBarRightItem>
+  <SearchBarInput placeholder="Quick search..." name="search" />
+</SearchBar>
+```
